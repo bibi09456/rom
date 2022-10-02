@@ -7,6 +7,9 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - run: |
+          wget https://raw.githubusercontent.com/apache/flink/02d30ace69dc18555a5085eccf70ee884e73a16e/tools/azure-pipelines/free_disk_space.sh
+          chmod +x free_disk_space.sh
+          ./free_disk_space.sh
           sudo apt update
           sudo apt install bc git curl zip m4 rsync python3-protobuf default-jdk-headless default-jre-headless libncurses5 libncurses5-dev libssl-dev repo -y
           repo init -u https://gitlab.com/CalyxOS/platform_manifest -b android11-qpr1 --depth=1
