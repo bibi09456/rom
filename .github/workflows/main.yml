@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - run: |
-        sudo apt update
-        sudo apt install bc git curl zip m4 rsync python3-protobuf default-jdk-headless default-jre-headless libncurses5 libncurses5-dev libssl-dev repo -y
-        repo init -u https://gitlab.com/CalyxOS/platform_manifest -b android11-qpr1 --depth=1
-        repo sync -j$(nproc --all)
+          sudo apt update
+          sudo apt install bc git curl zip m4 rsync python3-protobuf default-jdk-headless default-jre-headless libncurses5 libncurses5-dev libssl-dev repo -y
+          repo init -u https://gitlab.com/CalyxOS/platform_manifest -b android11-qpr1 --depth=1
+          repo sync -j$(nproc --all)
